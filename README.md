@@ -1,10 +1,10 @@
 # Synapse Data Extraction Script
 
 ## Overview
-This script extracts data from Synapse and converts it to JSON format. I used an existing script as a starting point, added new functions to extract additional data types (e.g., GGA data), and learned to use a `.env` file for secure credential management.
+This script extracts data from Synapse and converts it to JSON format. I used an existing script as a starting point and added new functions to extract additional data types (e.g., fuel consumption data).
 
 ## Tools
-Python, Jupyter Notebooks, SQL.
+Python, SQL.
 
 ## Example Code
-In the file "ccc" there are some code snippets to show the logic of the extraction process.
+In the file "synape_to_json_extractor.py" there are some code snippets to show the logic of the extraction process.
