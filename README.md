@@ -1,23 +1,28 @@
-# Synapse Data Extraction Script
+# Data Extraction Scripts
 
-## Overview
-This script extracts data from Synapse and converts it to JSON format. I used an existing script as a starting point and added new functions to extract additional data types (e.g., fuel consumption data).
+## Synapse Data Extraction Script
 
-## Tools
-Python, T-SQL.
+### Overview
+This script extracts data from Synapse and converts it to JSON format. I started with an existing script and added new functions to extract additional data types (e.g., fuel consumption data).
 
-## Example Code
-In the file `synape_to_json_extractor.py` there are some code snippets to show the logic of this extraction process.
+### Tools
+- Python
+- T-SQL
 
-----------------------------------------------
+### Example Code
+See `synapse_to_json_extractor.py` for code snippets illustrating the extraction process.
 
-# Timescale Data Extraction Script
+---
 
-## Overview
-This script extracts data from Timescale and converts it to JSON format. I started with an existing script and added new functions to extract additional data types. This is also where I learned to use a `.env` file for secure credential management.
+## Timescale Data Extraction Script
 
-# Tools
-Python, SQL.
+### Overview
+This script extracts data from Timescale and converts it to JSON format. I developed it from scratch, using the Synapse extractor as a reference and AI tools for syntax and debugging support. This project also introduced me to using `.env` files for secure credential management.
 
-## Example Code
-In the file `timescale_to_json_extractor.py` there are some code snippets to show the logic of this extraction process.
+### Tools
+- Python
+- SQL
+
+### Example Code
+See `timescale_to_json_extractor.py` for code snippets illustrating the extraction process.
+
