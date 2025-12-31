@@ -131,3 +131,29 @@ class SynapseExtractor:
                                                'Server=tcp:seafar(confidential);'
                                                'Database=master;Uid=maria.chiara.bodda@seafar.eu;'
                                                'Encrypt=yes;Authentication=ActiveDirectoryInteractive;')
+    
+  def _execute_and_save(self, query, file_path):
+    """Execute a query on Synapse and save the results as JSON."""
+    try:
+      with pyodbc.connect(self.synapse_conn_string) as conn:
+          with conn.cursor() as cursor:
+              cursor.execute(query)
+              
+              # Get column names
+              columns = [column[0] for column in cursor.description]
+              
+              # Fetch all rows and convert to list of dictionaries
+              data = []
+              for row in cursor.fetchall():
+                  data.append(dict(zip(columns, row)))
+              
+              # Save to JSON file
+              with open(file_path, 'w') as f:
+                  json.dump(data, f, indent=2, default=str)
+              
+              self.logger.info(f"Saved {len(data)} records to {file_path}")
+              return len(data)
+            
+    except Exception as e:
+      self.logger.error(f"Error executing query or saving file: {e}")
+      return 0
