@@ -9,6 +9,8 @@ Python, T-SQL.
 ## Example Code
 In the file `synape_to_json_extractor.py` there are some code snippets to show the logic of this extraction process.
 
+----------------------------------------------
+
 # Timescale Data Extraction Script
 
 ## Overview
